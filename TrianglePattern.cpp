@@ -18,7 +18,7 @@ int main(){
 void print_right_star(int num){ 
    for(int i{1}; i<=num; i++){         // for printing rows
       for(int j{1}; j<=i; j++){        // for printing columns
-         cout << "*";
+         cout << j;
       }
       cout << endl;
    }  
