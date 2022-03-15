@@ -12,13 +12,16 @@ int main(){
    cin >> num;
 
    print_right_star(num);
+
+   cout << endl;
+   return 0;
 }
 
 
 void print_right_star(int num){ 
-   for(int i{1}; i<=num; i++){         // for printing rows
-      for(int j{1}; j<=i; j++){        // for printing columns
-         cout << j;
+   for(int row{1}; row<=num; row++){         // for printing rows
+      for(int col{1}; col<=row; col++){        // for printing columns
+         cout << "*";
       }
       cout << endl;
    }  
