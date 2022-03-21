@@ -39,7 +39,7 @@ int CheckPassword(char str[], int n, int min){
    if(n<min)                  
       return 0;
    
-   if(str[0]-'0'>=0 && str[0]-'0' <=9)          // to check first number is digit
+   if(isdigit(str[0]))          // to check first number is digit
       return 0;                            
    
    int a{0}, cap{}, nu{};
@@ -48,10 +48,10 @@ int CheckPassword(char str[], int n, int min){
       if(str[a]== ' ' || str[a]=='+')         // false if password has space or + symbol
          return 0;
       
-      if(str[a]>=65 && str[a]<=90){             // to check capital letter in password
+      if(isupper(str[a])){             // to check capital letter in password
          cap++;
       }
-      else if(str[a]-'0'>=0 && str[a]-'0' <=9){       // to check numerical character in password
+      else if(isdigit(str[a])){       // to check numerical character in password
          nu++;
       }
       a++;
